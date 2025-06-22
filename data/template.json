@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "year": "2024",
+      "startDate": "MM-DD",
+      "endDate": "MM-DD",
+      "country": "indonesia",
+      "city": "bali",
+      "photo": [
+        "bali_01",
+        "bali_02"
+      ]
+    },
+    {
+      "year": "2025",
+      "startDate": "MM-DD",
+      "endDate": "MM-DD",
+      "country": "japan",
+      "city": "hokkaido",
+      "photo": [
+        "hokkaido_01",
+        "hokkaido_02"
+      ]
+    }
+  ]
+}
