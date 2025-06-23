@@ -1,26 +1,45 @@
 {
-  "data": [
+  "scanResult": {
+    "timestamp": "2025-06-23T06:24:18.784Z",
+    "summary": {
+      "newTrips": 1,
+      "updatedTrips": 1,
+      "unchangedTrips": 2
+    }
+  },
+  "newTrips": [
     {
-      "year": "2024",
+      "year": "2023",
       "startDate": "MM-DD",
       "endDate": "MM-DD",
-      "country": "indonesia",
-      "city": "bali",
+      "country": "korea",
+      "city": "busan",
+      "city_tw": "busan",
       "photo": [
-        "bali_01",
-        "bali_02"
+        "busan_01"
       ]
-    },
+    }
+  ],
+  "updatedTrips": [
     {
-      "year": "2025",
-      "startDate": "MM-DD",
-      "endDate": "MM-DD",
-      "country": "japan",
-      "city": "hokkaido",
-      "photo": [
-        "hokkaido_01",
-        "hokkaido_02"
-      ]
+      "tripKey": "2025_japan",
+      "displayName": "北海道",
+      "newPhotos": [
+        "sappro_01"
+      ],
+      "updatedRecord": {
+        "year": "2025",
+        "startDate": "03-15",
+        "endDate": "03-23",
+        "country": "japan",
+        "city": "hokkaido",
+        "city_tw": "北海道",
+        "photo": [
+          "hokkaido_01",
+          "hokkaido_02",
+          "sappro_01"
+        ]
+      }
     }
   ]
 }
