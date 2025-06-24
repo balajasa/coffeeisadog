@@ -185,8 +185,8 @@ function scanPhotos() {
       startDate: "MM-DD",
       endDate: "MM-DD",
       country: trip.country,
-      city: trip.cities.length === 1 ? trip.cities[0] : trip.cities,
-      city_tw: trip.cities.length === 1 ? trip.cities[0] : trip.cities, // 需要手動修改
+      city: trip.cities,
+      city_tw: trip.cities.slice(),
       photo: trip.photos
     };
     templateData.newTrips.push(tripData);
@@ -197,7 +197,9 @@ function scanPhotos() {
     const { tripKey, originalTrip, updatedTrip, newPhotos } = update;
     templateData.updatedTrips.push({
       tripKey: tripKey,
-      displayName: originalTrip.city_tw || originalTrip.city,
+      displayName: Array.isArray(originalTrip.city_tw)
+        ? originalTrip.city_tw.join(', ')
+        : (originalTrip.city_tw || (Array.isArray(originalTrip.city) ? originalTrip.city.join(', ') : originalTrip.city)),
       newPhotos: newPhotos,
       updatedRecord: updatedTrip
     });
@@ -207,7 +209,9 @@ function scanPhotos() {
   deletedTrips.forEach(deleted => {
     templateData.deletedTrips.push({
       tripKey: deleted.tripKey,
-      displayName: deleted.trip.city_tw || deleted.trip.city,
+      displayName: Array.isArray(deleted.trip.city_tw)
+        ? deleted.trip.city_tw.join(', ')
+        : (deleted.trip.city_tw || (Array.isArray(deleted.trip.city) ? deleted.trip.city.join(', ') : deleted.trip.city)),
       reason: deleted.reason,
       originalRecord: deleted.trip
     });
@@ -225,7 +229,9 @@ function scanPhotos() {
 
     templateData.tripsWithDeletedPhotos.push({
       tripKey: tripKey,
-      displayName: originalTrip.city_tw || originalTrip.city,
+      displayName: Array.isArray(originalTrip.city_tw)
+        ? originalTrip.city_tw.join(', ')
+        : (originalTrip.city_tw || (Array.isArray(originalTrip.city) ? originalTrip.city.join(', ') : originalTrip.city)),
       deletedPhotos: deletedPhotos,
       newPhotos: newPhotos || [],
       updatedRecord: updatedRecord
@@ -248,7 +254,9 @@ function scanPhotos() {
     if (updatedTrips.length > 0) {
       console.log(`🔄 發現 ${updatedTrips.length} 個更新行程`);
       updatedTrips.forEach(update => {
-        const displayName = update.originalTrip.city_tw || update.originalTrip.city;
+        const displayName = Array.isArray(update.originalTrip.city_tw)
+          ? update.originalTrip.city_tw.join(', ')
+          : (update.originalTrip.city_tw || (Array.isArray(update.originalTrip.city) ? update.originalTrip.city.join(', ') : update.originalTrip.city));
         console.log(`   - ${update.tripKey} (${displayName}): +${update.newPhotos.length} 張照片`);
       });
     }
@@ -256,7 +264,9 @@ function scanPhotos() {
     if (deletedTrips.length > 0) {
       console.log(`🗑️  發現 ${deletedTrips.length} 個被刪除的行程`);
       deletedTrips.forEach(deleted => {
-        const displayName = deleted.trip.city_tw || deleted.trip.city;
+        const displayName = Array.isArray(deleted.trip.city_tw)
+          ? deleted.trip.city_tw.join(', ')
+          : (deleted.trip.city_tw || (Array.isArray(deleted.trip.city) ? deleted.trip.city.join(', ') : deleted.trip.city));
         console.log(`   - ${deleted.tripKey} (${displayName}): ${deleted.reason}`);
       });
     }
@@ -264,7 +274,9 @@ function scanPhotos() {
     if (tripsWithDeletedPhotos.length > 0) {
       console.log(`📸 發現 ${tripsWithDeletedPhotos.length} 個行程有照片被刪除`);
       tripsWithDeletedPhotos.forEach(deleted => {
-        const displayName = deleted.originalTrip.city_tw || deleted.originalTrip.city;
+        const displayName = Array.isArray(deleted.originalTrip.city_tw)
+          ? deleted.originalTrip.city_tw.join(', ')
+          : (deleted.originalTrip.city_tw || (Array.isArray(deleted.originalTrip.city) ? deleted.originalTrip.city.join(', ') : deleted.originalTrip.city));
         console.log(`   - ${deleted.tripKey} (${displayName}): -${deleted.deletedPhotos.length} 張照片`);
       });
     }

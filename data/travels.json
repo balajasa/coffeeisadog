@@ -5,8 +5,8 @@
       "startDate": "03-13",
       "endDate": "03-16",
       "country": "philippines",
-      "city": "angeles",
-      "city_tw": "安吉利斯",
+      "city": ["angeles"],
+      "city_tw": ["安吉利斯"],
       "photo": ["angeles_01"]
     },
     {
@@ -14,8 +14,8 @@
       "startDate": "06-27",
       "endDate": "07-03",
       "country": "indonesia",
-      "city": "bali",
-      "city_tw": "峇里島",
+      "city": ["bali"],
+      "city_tw": ["峇里島"],
       "photo": ["bali_01", "bali_02"]
     },
     {
@@ -23,8 +23,8 @@
       "startDate": "03-15",
       "endDate": "03-23",
       "country": "japan",
-      "city": "hokkaido",
-      "city_tw": "北海道",
+      "city": ["hokkaido"],
+      "city_tw": ["北海道"],
       "photo": ["hokkaido_01", "hokkaido_02"]
     }
   ]

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "scan": "node scripts/scan-file.js",
-    "serve": "http-server -p 3000 --cors"
+    "start": "http-server -p 3000 --cors"
   },
   "devDependencies": {
     "http-server": "^14.1.1"
