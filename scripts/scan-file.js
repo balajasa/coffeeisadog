@@ -36,7 +36,7 @@ function scanPhotos() {
       // 按城市分組
       const cities = {};
       photos.forEach(photo => {
-        const city = photo.split('_')[0]; // hokkaido_01 → hokkaido
+        const city = photo.split('_')[0];
         if (!cities[city]) cities[city] = [];
         cities[city].push(photo);
       });
@@ -88,12 +88,13 @@ function scanPhotos() {
     existingMap.set(key, t);
   });
 
-  // 分析變化
+  // 分析變化 - 先宣告所有變數
   const newTrips = [];
   const updatedTrips = [];
   const unchangedTrips = [];
   const deletedTrips = [];
   const tripsWithDeletedPhotos = [];
+  const tripsNeedCityFix = [];
 
   // 處理掃描到的行程
   Object.keys(trips).forEach(tripKey => {
@@ -107,6 +108,35 @@ function scanPhotos() {
       const existingTrip = existingMap.get(tripKey);
       const existingPhotos = Array.isArray(existingTrip.photo) ? existingTrip.photo : [];
       const scannedPhotos = scannedTrip.photos;
+
+      // 檢查城市欄位是否需要修復（有照片但city是空的）
+      const existingCities = Array.isArray(existingTrip.city) ? existingTrip.city : [];
+      const shouldHaveCities = existingPhotos.length > 0;
+      const hasCityData = existingCities.length > 0;
+
+      if (shouldHaveCities && !hasCityData) {
+        // 需要修復城市欄位
+        const cities = {};
+        existingPhotos.forEach(photo => {
+          const city = photo.split('_')[0];
+          if (!cities[city]) cities[city] = [];
+          cities[city].push(photo);
+        });
+        const cityList = Object.keys(cities).sort();
+
+        const fixedTrip = {
+          ...existingTrip,
+          city: cityList
+        };
+
+        tripsNeedCityFix.push({
+          tripKey,
+          originalTrip: existingTrip,
+          fixedTrip: fixedTrip,
+          addedCities: cityList
+        });
+        return; // 跳過其他檢查，因為這是修復操作
+      }
 
       const newPhotos = scannedPhotos.filter(photo =>
         !existingPhotos.includes(photo)
@@ -129,10 +159,21 @@ function scanPhotos() {
         }
 
         if (newPhotos.length > 0) {
-          // 合併照片，保留原有資訊
+          // 重新解析所有照片的城市名稱
+          const allPhotos = [...existingPhotos, ...newPhotos].sort();
+          const cities = {};
+          allPhotos.forEach(photo => {
+            const city = photo.split('_')[0];
+            if (!cities[city]) cities[city] = [];
+            cities[city].push(photo);
+          });
+          const cityList = Object.keys(cities).sort();
+
+          // 合併照片，保留原有資訊，更新城市列表
           const mergedTrip = {
             ...existingTrip,
-            photo: [...existingPhotos, ...newPhotos].sort()
+            city: cityList,
+            photo: allPhotos
           };
 
           updatedTrips.push({
@@ -169,13 +210,15 @@ function scanPhotos() {
         updatedTrips: updatedTrips.length,
         unchangedTrips: unchangedTrips.length,
         deletedTrips: deletedTrips.length,
-        tripsWithDeletedPhotos: tripsWithDeletedPhotos.length
+        tripsWithDeletedPhotos: tripsWithDeletedPhotos.length,
+        tripsNeedCityFix: tripsNeedCityFix.length
       }
     },
     newTrips: [],
     updatedTrips: [],
     deletedTrips: [],
-    tripsWithDeletedPhotos: []
+    tripsWithDeletedPhotos: [],
+    tripsNeedCityFix: []
   };
 
   // 處理新增行程
@@ -187,6 +230,7 @@ function scanPhotos() {
       country: trip.country,
       city: trip.cities,
       city_tw: trip.cities.slice(),
+      state_tw: [],
       photo: trip.photos
     };
     templateData.newTrips.push(tripData);
@@ -221,9 +265,19 @@ function scanPhotos() {
   tripsWithDeletedPhotos.forEach(deleted => {
     const { tripKey, originalTrip, deletedPhotos, remainingPhotos, newPhotos } = deleted;
 
-    // 建立更新後的記錄（只保留存在的照片）
+    // 重新解析剩餘照片的城市名稱
+    const cities = {};
+    remainingPhotos.forEach(photo => {
+      const city = photo.split('_')[0];
+      if (!cities[city]) cities[city] = [];
+      cities[city].push(photo);
+    });
+    const cityList = Object.keys(cities).sort();
+
+    // 建立更新後的記錄（只保留存在的照片，更新城市列表）
     const updatedRecord = {
       ...originalTrip,
+      city: cityList,
       photo: remainingPhotos
     };
 
@@ -238,10 +292,65 @@ function scanPhotos() {
     });
   });
 
+  // 處理需要修復城市欄位的行程
+  tripsNeedCityFix.forEach(fix => {
+    const { tripKey, originalTrip, fixedTrip, addedCities } = fix;
+    templateData.tripsNeedCityFix.push({
+      tripKey: tripKey,
+      displayName: Array.isArray(originalTrip.city_tw)
+        ? originalTrip.city_tw.join(', ')
+        : (originalTrip.city_tw || (Array.isArray(originalTrip.city) ? originalTrip.city.join(', ') : originalTrip.city)),
+      addedCities: addedCities,
+      fixedRecord: fixedTrip
+    });
+  });
+
+  // 更新最後掃描時間
+  const lastScanPath = path.join(__dirname, '../data/last-scan.txt');
+  const now = new Date();
+
+  // 可選的時間格式：
+  // const currentTime = now.toISOString(); // ISO格式: 2025-06-24T12:00:00.000Z
+  // const currentTime = now.toLocaleString('zh-TW'); // 台灣格式: 2025/6/24 下午8:00:00
+  // const currentTime = now.toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' }); // 台北時間
+
+  const currentTime = now.toLocaleString('zh-TW', {
+    timeZone: 'Asia/Taipei',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  });
+
+  const scanTimeMessage = `Last scan time: ${currentTime}`;
+  try {
+    fs.writeFileSync(lastScanPath, scanTimeMessage, 'utf8');
+  } catch (error) {
+    console.log('⚠️  無法更新掃描時間檔案:', error.message);
+  }
+
   // 寫入 template.json
   const templatePath = path.join(__dirname, '../data/template.json');
   try {
-    fs.writeFileSync(templatePath, JSON.stringify(templateData, null, 2), 'utf8');
+    // 自定義 JSON 格式化，讓陣列顯示在同一行
+    const jsonString = JSON.stringify(templateData, null, 2)
+      .replace(/(\s*)"([^"]+)":\s*\[\s*\n(\s*)"([^"]*)"((?:\s*,\s*\n\s*"[^"]*")*)\s*\n\s*\]/g, (match, indent, key, innerIndent, firstItem, restItems) => {
+        // 處理陣列內容，將所有項目放在同一行
+        const items = [firstItem];
+        if (restItems) {
+          const additionalItems = restItems.match(/"[^"]*"/g);
+          if (additionalItems) {
+            items.push(...additionalItems.map(item => item.slice(1, -1))); // 移除引號
+          }
+        }
+        const formattedItems = items.map(item => `"${item}"`).join(', ');
+        return `${indent}"${key}": [ ${formattedItems} ]`;
+      });
+
+    fs.writeFileSync(templatePath, jsonString, 'utf8');
 
     // 簡化的 console 輸出
     console.log('📊 掃描完成！');
@@ -281,11 +390,21 @@ function scanPhotos() {
       });
     }
 
+    if (tripsNeedCityFix.length > 0) {
+      console.log(`🔧 發現 ${tripsNeedCityFix.length} 個行程需要修復城市欄位`);
+      tripsNeedCityFix.forEach(fix => {
+        const displayName = Array.isArray(fix.originalTrip.city_tw)
+          ? fix.originalTrip.city_tw.join(', ')
+          : (fix.originalTrip.city_tw || (Array.isArray(fix.originalTrip.city) ? fix.originalTrip.city.join(', ') : fix.originalTrip.city));
+        console.log(`   - ${fix.tripKey} (${displayName}): 添加城市 [${fix.addedCities.join(', ')}]`);
+      });
+    }
+
     if (unchangedTrips.length > 0) {
       console.log(`✅ ${unchangedTrips.length} 個行程無變化`);
     }
 
-    if (newTrips.length === 0 && updatedTrips.length === 0 && deletedTrips.length === 0 && tripsWithDeletedPhotos.length === 0) {
+    if (newTrips.length === 0 && updatedTrips.length === 0 && deletedTrips.length === 0 && tripsWithDeletedPhotos.length === 0 && tripsNeedCityFix.length === 0) {
       console.log('🎉 所有行程都是最新狀態！');
     } else {
       console.log(`\n📄 詳細結果已輸出到: template.json`);
@@ -293,6 +412,10 @@ function scanPhotos() {
 
       if (deletedTrips.length > 0 || tripsWithDeletedPhotos.length > 0) {
         console.log('⚠️  發現刪除項目，請檢查是否需要更新 travels.json');
+      }
+
+      if (tripsNeedCityFix.length > 0) {
+        console.log('🔧 發現需要修復的城市欄位，請檢查 template.json 中的 tripsNeedCityFix');
       }
     }
 

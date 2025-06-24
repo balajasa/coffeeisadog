@@ -1,45 +1,18 @@
 {
   "scanResult": {
-    "timestamp": "2025-06-23T06:24:18.784Z",
+    "timestamp": "2025-06-24T03:42:00.514Z",
     "summary": {
-      "newTrips": 1,
-      "updatedTrips": 1,
-      "unchangedTrips": 2
+      "newTrips": 0,
+      "updatedTrips": 0,
+      "unchangedTrips": 3,
+      "deletedTrips": 0,
+      "tripsWithDeletedPhotos": 0,
+      "tripsNeedCityFix": 0
     }
   },
-  "newTrips": [
-    {
-      "year": "2023",
-      "startDate": "MM-DD",
-      "endDate": "MM-DD",
-      "country": "korea",
-      "city": "busan",
-      "city_tw": "busan",
-      "photo": [
-        "busan_01"
-      ]
-    }
-  ],
-  "updatedTrips": [
-    {
-      "tripKey": "2025_japan",
-      "displayName": "北海道",
-      "newPhotos": [
-        "sappro_01"
-      ],
-      "updatedRecord": {
-        "year": "2025",
-        "startDate": "03-15",
-        "endDate": "03-23",
-        "country": "japan",
-        "city": "hokkaido",
-        "city_tw": "北海道",
-        "photo": [
-          "hokkaido_01",
-          "hokkaido_02",
-          "sappro_01"
-        ]
-      }
-    }
-  ]
+  "newTrips": [],
+  "updatedTrips": [],
+  "deletedTrips": [],
+  "tripsWithDeletedPhotos": [],
+  "tripsNeedCityFix": []
 }
