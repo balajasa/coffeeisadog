@@ -4,7 +4,7 @@
       "year": "2024",
       "startDate": "03-13",
       "endDate": "03-16",
-      "country": "philippines",
+      "country": ["philippines"],
       "state_tw": ["邦板牙"],
       "city": ["angeles"],
       "city_tw": ["安吉利斯"],
@@ -12,23 +12,33 @@
     },
     {
       "year": "2024",
+      "startDate": "06-05",
+      "endDate": "06-09",
+      "country": ["hongkong", "macao"],
+      "state_tw": ["香港"],
+      "city": ["Hong Kong", "Macao"],
+      "city_tw": ["香港", "澳門"],
+      "photo": []
+    },
+    {
+      "year": "2024",
       "startDate": "06-27",
       "endDate": "07-03",
-      "country": "indonesia",
-      "state_tw": [ "峇里島" ],
-      "city": [ "kuta", "ubud" ],
-      "city_tw": [ "庫塔", "烏布" ],
-      "photo": [ "kuta_01", "kuta_02" ]
+      "country": ["indonesia"],
+      "state_tw": ["峇里島"],
+      "city": ["kuta", "ubud"],
+      "city_tw": ["庫塔", "烏布"],
+      "photo": ["kuta_01", "kuta_02"]
     },
     {
       "year": "2025",
       "startDate": "03-15",
       "endDate": "03-23",
-      "country": "japan",
-      "state_tw": [ "北海道" ],
+      "country": ["japan"],
+      "state_tw": ["北海道"],
       "city": ["furano", "otaru", "chitose", "sapporo", "toyako"],
-      "city_tw": [ "富良野", "千歲", "小樽", "洞爺湖", "札幌" ],
-      "photo": [ "furano_01", "otaru_01", "sapporo_01" ]
+      "city_tw": ["富良野", "千歲", "小樽", "洞爺湖", "札幌"],
+      "photo": ["furano_01", "otaru_01", "sapporo_01"]
     }
   ]
 }
