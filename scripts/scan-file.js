@@ -49,6 +49,7 @@ function scanPhotos() {
         trips[tripKey] = {
           year,
           country: countries, // 改為陣列
+          folderName: photos.length > 0 ? countryFolder : "", // 有照片才設定 folderName
           cities: [],
           photos: []
         };
@@ -130,7 +131,8 @@ function scanPhotos() {
         const fixedTrip = {
           ...existingTrip,
           city: cityList,
-          country: Array.isArray(existingTrip.country) ? existingTrip.country : [existingTrip.country] // 確保 country 是陣列
+          country: Array.isArray(existingTrip.country) ? existingTrip.country : [existingTrip.country], // 確保 country 是陣列
+          folderName: existingTrip.folderName || "" // 確保有 folderName 字段
         };
 
         tripsNeedCityFix.push({
@@ -173,12 +175,13 @@ function scanPhotos() {
           });
           const cityList = Object.keys(cities).sort();
 
-          // 合併照片，保留原有資訊，更新城市列表
+          // 合併照片，保留原有資訊，更新城市列表和 folderName
           const mergedTrip = {
             ...existingTrip,
             city: cityList,
             photo: allPhotos,
-            country: Array.isArray(existingTrip.country) ? existingTrip.country : [existingTrip.country] // 確保 country 是陣列
+            country: Array.isArray(existingTrip.country) ? existingTrip.country : [existingTrip.country], // 確保 country 是陣列
+            folderName: allPhotos.length > 0 ? scannedTrip.folderName : "" // 更新 folderName
           };
 
           updatedTrips.push({
@@ -198,7 +201,10 @@ function scanPhotos() {
   existing.forEach(trip => {
     const countryArray = Array.isArray(trip.country) ? trip.country : [trip.country];
     const tripKey = `${trip.year}_${countryArray.join('_')}`;
-    if (!trips[tripKey]) {
+    const hasPhotos = trip.photo && Array.isArray(trip.photo) && trip.photo.length > 0;
+
+    // 只有當行程有照片時才檢查資料夾是否存在
+    if (hasPhotos && !trips[tripKey]) {
       deletedTrips.push({
         tripKey,
         trip: trip,
@@ -235,8 +241,9 @@ function scanPhotos() {
       endDate: "MM-DD",
       country: trip.country, // 現在是陣列
       city: trip.cities,
-      city_tw: trip.cities.slice(),
-      state_tw: [],
+      cityTW: trip.cities.slice(),
+      stateTW: [],
+      folderName: trip.photos.length > 0 ? trip.folderName : "", // 有照片才設定 folderName
       photo: trip.photos
     };
     templateData.newTrips.push(tripData);
@@ -281,7 +288,8 @@ function scanPhotos() {
       ...originalTrip,
       city: cityList,
       photo: remainingPhotos,
-      country: Array.isArray(originalTrip.country) ? originalTrip.country : [originalTrip.country] // 確保 country 是陣列
+      country: Array.isArray(originalTrip.country) ? originalTrip.country : [originalTrip.country], // 確保 country 是陣列
+      folderName: remainingPhotos.length > 0 ? (originalTrip.folderName || "") : "" // 根據照片數量設定 folderName
     };
 
     templateData.tripsWithDeletedPhotos.push({
@@ -306,11 +314,11 @@ function scanPhotos() {
 
   // 輔助函數：生成顯示名稱
   function getDisplayName(trip) {
-    // 優先使用 city_tw，其次使用 city
-    if (Array.isArray(trip.city_tw) && trip.city_tw.length > 0) {
-      return trip.city_tw.join(', ');
-    } else if (trip.city_tw && typeof trip.city_tw === 'string') {
-      return trip.city_tw;
+    // 優先使用 cityTW，其次使用 city
+    if (Array.isArray(trip.cityTW) && trip.cityTW.length > 0) {
+      return trip.cityTW.join(', ');
+    } else if (trip.cityTW && typeof trip.cityTW === 'string') {
+      return trip.cityTW;
     } else if (Array.isArray(trip.city) && trip.city.length > 0) {
       return trip.city.join(', ');
     } else if (trip.city && typeof trip.city === 'string') {

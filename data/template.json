@@ -1,34 +1,18 @@
 {
   "scanResult": {
-    "timestamp": "2025-06-25T08:03:47.687Z",
+    "timestamp": "2025-06-26T07:08:02.694Z",
     "summary": {
       "newTrips": 0,
       "updatedTrips": 0,
-      "unchangedTrips": 3,
-      "deletedTrips": 1,
+      "unchangedTrips": 4,
+      "deletedTrips": 0,
       "tripsWithDeletedPhotos": 0,
       "tripsNeedCityFix": 0
     }
   },
   "newTrips": [],
   "updatedTrips": [],
-  "deletedTrips": [
-    {
-      "tripKey": "2024_hongkong_macao",
-      "displayName": "香港, 澳門",
-      "reason": "資料夾不存在",
-      "originalRecord": {
-        "year": "2024",
-        "startDate": "06-05",
-        "endDate": "06-09",
-        "country": ["hongkong", "macao"],
-        "state_tw": ["香港"],
-        "city": ["Hong Kong", "Macao"],
-        "city_tw": ["香港", "澳門"],
-        "photo": []
-      }
-    }
-  ],
+  "deletedTrips": [],
   "tripsWithDeletedPhotos": [],
   "tripsNeedCityFix": []
 }
