@@ -1,18 +1,47 @@
 {
   "scanResult": {
-    "timestamp": "2025-06-30T06:21:22.532Z",
+    "timestamp": "2025-07-11T17:24:52.166Z",
     "summary": {
-      "newTrips": 0,
+      "newTrips": 1,
       "updatedTrips": 0,
-      "unchangedTrips": 4,
-      "deletedTrips": 0,
+      "unchangedTrips": 3,
+      "deletedTrips": 1,
       "tripsWithDeletedPhotos": 0,
       "tripsNeedCityFix": 0
     }
   },
-  "newTrips": [],
+  "newTrips": [
+    {
+      "year": "2024",
+      "startDate": "MM-DD",
+      "endDate": "MM-DD",
+      "country": ["hongkong", "macao"],
+      "city": ["hongkong", "macao"],
+      "cityTW": ["hongkong", "macao"],
+      "stateTW": [],
+      "folderName": "hongkong_macao",
+      "photo": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "macao_01", "macao_02", "macao_03", "macao_04"]
+    }
+  ],
   "updatedTrips": [],
-  "deletedTrips": [],
+  "deletedTrips": [
+    {
+      "tripKey": "2024_china",
+      "displayName": "香港, 澳門",
+      "reason": "資料夾不存在",
+      "originalRecord": {
+        "year": "2024",
+        "startDate": "06-05",
+        "endDate": "06-09",
+        "country": ["china"],
+        "stateTW": ["中國"],
+        "city": ["hongkong", "macao"],
+        "cityTW": ["香港", "澳門"],
+        "folderName": "hongkong_macao",
+        "photo": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "macao_01", "macao_02", "macao_03", "macao_04"]
+      }
+    }
+  ],
   "tripsWithDeletedPhotos": [],
   "tripsNeedCityFix": []
 }

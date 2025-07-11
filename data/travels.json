@@ -4,7 +4,7 @@
       "year": "2005",
       "startDate": "08-16",
       "endDate": "08-21",
-      "country": ["gum"],
+      "country": ["guam"],
       "stateTW": ["關島"],
       "city": ["guam"],
       "cityTW": ["關島"],
@@ -141,7 +141,7 @@
       "city": ["hongkong", "macao"],
       "cityTW": ["香港", "澳門"],
       "folderName": "hongkong_macao",
-      "photo": ["hongkong_01", "macao_01"]
+      "photo": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "macao_01", "macao_02", "macao_03", "macao_04"]
     },
     {
       "year": "2024",
@@ -149,10 +149,10 @@
       "endDate": "07-03",
       "country": ["indonesia"],
       "stateTW": ["峇里島"],
-      "city": ["kuta", "ubud"],
-      "cityTW": ["庫塔鎮", "烏布鎮"],
+      "city": ["nusadua", "ubud", "kintamani"],
+      "cityTW": ["努沙杜瓦", "烏布", "金塔瑪尼"],
       "folderName": "indonesia",
-      "photo": ["kuta_01", "kuta_02"]
+      "photo": ["kintamani_01", "kintamani_02", "nusadua_01", "nusadua_02", "nusadua_03", "ubud_01", "ubud_02", "ubud_03"]
     },
     {
       "year": "2025",
@@ -160,10 +160,10 @@
       "endDate": "03-23",
       "country": ["japan"],
       "stateTW": ["北海道"],
-      "city": ["otaru", "furano", "chitose", "sapporo", "toyako"],
+      "city": ["chitose", "furano", "otaru", "sapporo"],
       "cityTW": ["千歲市", "富良野市", "小樽市", "洞爺湖町", "札幌市"],
       "folderName": "japan",
-      "photo": ["furano_01", "otaru_01", "sapporo_01"]
+      "photo": ["chitose_01", "furano_01", "otaru_01", "sapporo_01", "sapporo_02", "sapporo_03"]
     }
   ]
 }
