@@ -1,10 +1,10 @@
 {
   "scanResult": {
-    "timestamp": "2025-07-11T17:24:52.166Z",
+    "timestamp": "2025-07-12T17:49:42.398Z",
     "summary": {
       "newTrips": 1,
       "updatedTrips": 0,
-      "unchangedTrips": 3,
+      "unchangedTrips": 4,
       "deletedTrips": 1,
       "tripsWithDeletedPhotos": 0,
       "tripsNeedCityFix": 0

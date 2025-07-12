@@ -118,8 +118,8 @@
       "stateTW": ["釜山廣域市"],
       "city": ["busan"],
       "cityTW": ["釜山"],
-      "folderName": "",
-      "photo": []
+      "folderName": "korea",
+      "photo": ["busan_01", "busan_02", "busan_03", "busan_04", "busan_05", "busan_06", "busan_07", "busan_08", "busan_09", "busan_10", "busan_11", "busan_12"]
     },
     {
       "year": "2024",
@@ -130,7 +130,7 @@
       "city": ["angeles"],
       "cityTW": ["安吉利斯"],
       "folderName": "philippines",
-      "photo": ["angeles_01"]
+      "photo": ["angeles_01", "angeles_02", "angeles_03", "angeles_04", "angeles_05", "angeles_06", "angeles_07", "angeles_08"]
     },
     {
       "year": "2024",
