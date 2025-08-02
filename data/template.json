@@ -1,64 +1,18 @@
 {
   "scanResult": {
-    "timestamp": "2025-08-02T16:50:17.171Z",
+    "timestamp": "2025-08-02T16:56:07.105Z",
     "summary": {
-      "newTrips": 1,
-      "updatedTrips": 1,
-      "unchangedTrips": 7,
-      "deletedTrips": 1,
+      "newTrips": 0,
+      "updatedTrips": 0,
+      "unchangedTrips": 9,
+      "deletedTrips": 0,
       "tripsWithDeletedPhotos": 0,
       "tripsNeedCityFix": 0
     }
   },
-  "newTrips": [
-    {
-      "year": "2024",
-      "startDate": "MM-DD",
-      "endDate": "MM-DD",
-      "country": ["hongkong", "macao"],
-      "city": ["hongkong", "macao"],
-      "cityTW": ["hongkong", "macao"],
-      "stateTW": [],
-      "folderName": "hongkong_macao",
-      "photo": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "macao_01", "macao_02", "macao_03", "macao_04"]
-    }
-  ],
-  "updatedTrips": [
-    {
-      "tripKey": "2018_japan",
-      "displayName": "大阪市, 京都市, 奈良市",
-      "newPhotos": ["kyoto_01", "kyoto_02", "kyoto_03", "kyoto_04", "kyoto_05", "kyoto_06", "nara_01", "nara_02", "osaka_01", "osaka_02", "osaka_03"],
-      "updatedRecord": {
-        "year": "2018",
-        "startDate": "08-18",
-        "endDate": "08-22",
-        "country": ["japan"],
-        "stateTW": ["大阪府", "京都府"],
-        "city": ["kyoto", "nara", "osaka"],
-        "cityTW": ["大阪市", "京都市", "奈良市"],
-        "folderName": "japan",
-        "photo": ["kyoto_01", "kyoto_02", "kyoto_03", "kyoto_04", "kyoto_05", "kyoto_06", "nara_01", "nara_02", "osaka_01", "osaka_02", "osaka_03"]
-      }
-    }
-  ],
-  "deletedTrips": [
-    {
-      "tripKey": "2024_china",
-      "displayName": "香港, 澳門",
-      "reason": "資料夾不存在",
-      "originalRecord": {
-        "year": "2024",
-        "startDate": "06-05",
-        "endDate": "06-09",
-        "country": ["china"],
-        "stateTW": ["香港", "澳門"],
-        "city": ["hongkong", "macao"],
-        "cityTW": ["香港", "澳門"],
-        "folderName": "hongkong_macao",
-        "photo": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "macao_01", "macao_02", "macao_03", "macao_04"]
-      }
-    }
-  ],
+  "newTrips": [],
+  "updatedTrips": [],
+  "deletedTrips": [],
   "tripsWithDeletedPhotos": [],
   "tripsNeedCityFix": []
 }
