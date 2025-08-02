@@ -1,10 +1,10 @@
 {
   "scanResult": {
-    "timestamp": "2025-07-12T17:49:42.398Z",
+    "timestamp": "2025-08-02T16:50:17.171Z",
     "summary": {
       "newTrips": 1,
-      "updatedTrips": 0,
-      "unchangedTrips": 4,
+      "updatedTrips": 1,
+      "unchangedTrips": 7,
       "deletedTrips": 1,
       "tripsWithDeletedPhotos": 0,
       "tripsNeedCityFix": 0
@@ -23,7 +23,24 @@
       "photo": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "macao_01", "macao_02", "macao_03", "macao_04"]
     }
   ],
-  "updatedTrips": [],
+  "updatedTrips": [
+    {
+      "tripKey": "2018_japan",
+      "displayName": "大阪市, 京都市, 奈良市",
+      "newPhotos": ["kyoto_01", "kyoto_02", "kyoto_03", "kyoto_04", "kyoto_05", "kyoto_06", "nara_01", "nara_02", "osaka_01", "osaka_02", "osaka_03"],
+      "updatedRecord": {
+        "year": "2018",
+        "startDate": "08-18",
+        "endDate": "08-22",
+        "country": ["japan"],
+        "stateTW": ["大阪府", "京都府"],
+        "city": ["kyoto", "nara", "osaka"],
+        "cityTW": ["大阪市", "京都市", "奈良市"],
+        "folderName": "japan",
+        "photo": ["kyoto_01", "kyoto_02", "kyoto_03", "kyoto_04", "kyoto_05", "kyoto_06", "nara_01", "nara_02", "osaka_01", "osaka_02", "osaka_03"]
+      }
+    }
+  ],
   "deletedTrips": [
     {
       "tripKey": "2024_china",
@@ -34,7 +51,7 @@
         "startDate": "06-05",
         "endDate": "06-09",
         "country": ["china"],
-        "stateTW": ["中國"],
+        "stateTW": ["香港", "澳門"],
         "city": ["hongkong", "macao"],
         "cityTW": ["香港", "澳門"],
         "folderName": "hongkong_macao",

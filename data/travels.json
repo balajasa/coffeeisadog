@@ -94,10 +94,10 @@
       "endDate": "08-22",
       "country": ["japan"],
       "stateTW": ["大阪府", "京都府"],
-      "city": ["osaka", "kyoto"],
-      "cityTW": ["大阪市", "京都市"],
-      "folderName": "",
-      "photo": []
+      "city": ["osaka", "kyoto", "nara"],
+      "cityTW": ["大阪市", "京都市", "奈良市"],
+      "folderName": "japan",
+      "photo": ["kyoto_01", "kyoto_02", "kyoto_03", "kyoto_04", "kyoto_05", "kyoto_06", "nara_01", "nara_02", "osaka_01", "osaka_02", "osaka_03"]
     },
     {
       "year": "2020",
@@ -107,8 +107,8 @@
       "stateTW": ["首爾特別市"],
       "city": ["seoul", "chuncheon", "gapyeong"],
       "cityTW": ["首爾市", "春川市", "加平郡"],
-      "folderName": "",
-      "photo": []
+      "folderName": "korea",
+      "photo": ["gapyeong_01", "gapyeong_02", "gapyeong_03", "seoul_01", "seoul_02"]
     },
     {
       "year": "2023",
@@ -118,8 +118,8 @@
       "stateTW": ["石川縣", "東京都"],
       "city": ["kanazawa", "tokyo"],
       "cityTW": ["金澤市", "東京都"],
-      "folderName": "",
-      "photo": []
+      "folderName": "japan",
+      "photo": ["kanazawa_01", "kanazawa_02", "kanazawa_03", "kanazawa_04", "kanazawa_05", "kanazawa_06", "kanazawa_07", "kanazawa_08", "kanazawa_09", "kanazawa_10", "tokyo_01", "tokyo_02", "tokyo_03", "tokyo_04"]
     },
     {
       "year": "2023",
@@ -175,6 +175,17 @@
       "cityTW": ["千歲市", "富良野市", "小樽市", "洞爺湖町", "札幌市"],
       "folderName": "japan",
       "photo": ["chitose_01", "furano_01", "otaru_01", "sapporo_01", "sapporo_02", "sapporo_03"]
+    },
+    {
+      "year": "2025",
+      "startDate": "07-22",
+      "endDate": "07-27",
+      "country": ["korea"],
+      "stateTW": ["濟州市", "首爾特別市"],
+      "city": ["jeju", "seogwipo", "seoul"],
+      "cityTW": ["濟州市", "西歸浦市", "首爾"],
+      "folderName": "korea",
+      "photo": ["jeju_01", "jeju_02", "seogwipo_01", "seogwipo_02", "seogwipo_03", "seogwipo_04", "seogwipo_05", "seogwipo_06", "seoul_01", "seoul_02", "seoul_03"]
     }
   ]
 }
