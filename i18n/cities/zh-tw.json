@@ -1,0 +1,55 @@
+{
+  "cities": {
+    "japan": {
+      "tokyo": "東京",
+      "hakone": "箱根",
+      "yokohama": "橫濱",
+      "furano": "富良野",
+      "otaru": "小樽",
+      "chitose": "千歲",
+      "sapporo": "札幌",
+      "toyako": "洞爺湖",
+      "hakodate": "函館",
+      "asahikawa": "旭川",
+      "noboribetsu": "登別",
+      "okinawa": "沖繩",
+      "osaka": "大阪",
+      "kyoto": "京都",
+      "nara": "奈良",
+      "kanazawa": "金澤",
+      "shirakawa": "白川"
+    },
+    "korea": {
+      "seoul": "首爾",
+      "chuncheon": "春川",
+      "gapyeong": "加平",
+      "busan": "釜山",
+      "jeju": "濟州",
+      "seogwipo": "西歸浦"
+    },
+    "turkey": {
+      "istanbul": "伊斯坦堡",
+      "safranbolu": "番紅花城",
+      "ankara": "安卡拉",
+      "cappadocia": "卡帕多奇亞",
+      "antalya": "安塔利亞",
+      "side": "西代",
+      "aksaray": "阿克薩賴",
+      "izmir": "伊茲密爾",
+      "pamukkale": "棉堡",
+      "urgup": "於爾居普"
+    },
+    "china": {
+      "hongkong": "香港",
+      "macao": "澳門"
+    },
+    "indonesia": {
+      "nusadua": "努沙杜瓦",
+      "ubud": "烏布",
+      "kintamani": "金塔馬尼"
+    },
+    "philippines": {
+      "angeles": "洛杉磯"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "cities": {
+    "japan": {
+      "tokyo": "Tokyo",
+      "hakone": "Hakone",
+      "yokohama": "Yokohama",
+      "furano": "Furano",
+      "otaru": "Otaru",
+      "chitose": "Chitose",
+      "sapporo": "Sapporo",
+      "toyako": "Lake Toya",
+      "hakodate": "Hakodate",
+      "asahikawa": "Asahikawa",
+      "noboribetsu": "Noboribetsu",
+      "okinawa": "Okinawa",
+      "osaka": "Osaka",
+      "kyoto": "Kyoto",
+      "nara": "Nara",
+      "kanazawa": "Kanazawa",
+      "shirakawa": "Shirakawa"
+    },
+    "korea": {
+      "seoul": "Seoul",
+      "chuncheon": "Chuncheon",
+      "gapyeong": "Gapyeong",
+      "busan": "Busan",
+      "jeju": "Jeju",
+      "seogwipo": "Seogwipo"
+    },
+    "turkey": {
+      "istanbul": "Istanbul",
+      "safranbolu": "Safranbolu",
+      "ankara": "Ankara",
+      "cappadocia": "Cappadocia",
+      "antalya": "Antalya",
+      "side": "Side",
+      "aksaray": "Aksaray",
+      "izmir": "Izmir",
+      "pamukkale": "Pamukkale",
+      "urgup": "Urgup"
+    },
+    "china": {
+      "hongkong": "Hong Kong",
+      "macao": "Macao"
+    },
+    "indonesia": {
+      "nusadua": "Nusa Dua",
+      "ubud": "Ubud",
+      "kintamani": "Kintamani"
+    },
+    "philippines": {
+      "angeles": "Angeles"
+    }
+  }
+}
