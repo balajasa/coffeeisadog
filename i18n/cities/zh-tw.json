@@ -17,7 +17,15 @@
       "kyoto": "京都",
       "nara": "奈良",
       "kanazawa": "金澤",
-      "shirakawa": "白川"
+      "shirakawa": "白川",
+      "hokuto": "北社",
+      "izu": "伊豆"
+    },
+    "malaysia": {
+      "kualalumpur": "吉隆坡",
+      "malacca": "麻六甲",
+      "portdickson": "波德申",
+      "sungaipelek": "雙溪比力"
     },
     "korea": {
       "seoul": "首爾",
@@ -33,11 +41,13 @@
       "ankara": "安卡拉",
       "cappadocia": "卡帕多奇亞",
       "antalya": "安塔利亞",
-      "side": "西代",
       "aksaray": "阿克薩賴",
       "izmir": "伊茲密爾",
       "pamukkale": "棉堡",
-      "urgup": "於爾居普"
+      "urgup": "於爾居普",
+      "konya": "孔亞",
+      "Ephesus": "艾菲索斯",
+      "Goreme": "格雷梅"
     },
     "china": {
       "hongkong": "香港",

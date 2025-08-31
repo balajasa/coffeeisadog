@@ -17,7 +17,15 @@
       "kyoto": "Kyoto",
       "nara": "Nara",
       "kanazawa": "Kanazawa",
-      "shirakawa": "Shirakawa"
+      "shirakawa": "Shirakawa",
+      "hokuto": "Hokuto",
+      "izu": "Izu"
+    },
+    "malaysia": {
+      "kualalumpur": "Kuala Lumpur",
+      "malacca": "Malacca",
+      "portdickson": "Port Dickson",
+      "sungaipelek": "Sungai Pelek"
     },
     "korea": {
       "seoul": "Seoul",
@@ -33,11 +41,13 @@
       "ankara": "Ankara",
       "cappadocia": "Cappadocia",
       "antalya": "Antalya",
-      "side": "Side",
       "aksaray": "Aksaray",
       "izmir": "Izmir",
       "pamukkale": "Pamukkale",
-      "urgup": "Urgup"
+      "urgup": "Urgup",
+      "konya": "Konya",
+      "Ephesus": "ephesus",
+      "Goreme": "goreme"
     },
     "china": {
       "hongkong": "Hong Kong",
