@@ -84,7 +84,7 @@
       "country": ["turkey"],
       "stateTW": ["伊斯坦堡", "番紅花城", "安卡拉", "德尼茲利", "卡帕多奇亞", "安塔利亞", "阿克薩賴", "內夫謝希爾", "穆拉", "伊茲密爾"],
       "city": ["istanbul", "safranbolu", "ankara", "cappadocia", "antalya", "side", "aksaray", "izmir", "Pamukkale", "Urgup"],
-      "cityTW": ["伊斯坦堡", "番紅花城", "安卡拉", "卡帕多奇亞", "安塔利亞", "西德", "阿克薩賴", "伊茲密爾", "帕穆卡萊", "於爾古普"],
+      "cityTW": ["伊斯坦堡", "番紅花城", "安卡拉", "卡帕多奇亞", "安塔利亞", "西代", "阿克薩賴", "伊茲密爾", "帕穆卡萊", "於爾古普"],
       "folderName": "",
       "photo": []
     },
@@ -123,8 +123,8 @@
     },
     {
       "year": "2023",
-      "startDate": "03-13",
-      "endDate": "03-16",
+      "startDate": "07-19",
+      "endDate": "07-24",
       "country": ["korea"],
       "stateTW": ["釜山廣域市"],
       "city": ["busan"],

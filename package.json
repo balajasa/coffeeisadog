@@ -2,7 +2,7 @@
   "name": "coffeeisadog",
   "version": "1.0.0",
   "scripts": {
-    "scan": "node scripts/scan-file.js",
+    "scan": "node scripts/scan-folder.js",
     "start": "http-server -p 3000 --cors"
   },
   "devDependencies": {
