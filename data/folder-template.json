@@ -1,6 +1,41 @@
 {
   "folderData": [
     {
+      "year": "2010",
+      "folderName": "freshman_japan",
+      "photosName": ["hakone_01", "hokuto_01", "tokyo_01", "tokyo_02", "tokyo_03", "tokyo_04", "tokyo_05", "tokyo_06", "tokyo_07", "tokyo_08"]
+    },
+    {
+      "year": "2013",
+      "folderName": "summer_hokkaido",
+      "photosName": ["asahikawa_01", "chitose_01", "furano_01", "furano_02", "furano_03", "furano_04", "furano_05", "noboribetsu_01", "noboribetsu_02", "noboribetsu_03", "sapporo_01", "sapporo_02", "sapporo_03"]
+    },
+    {
+      "year": "2014",
+      "folderName": "okinawa",
+      "photosName": ["okinawa_01", "okinawa_02", "okinawa_03", "okinawa_04", "okinawa_05", "okinawa_06", "okinawa_07"]
+    },
+    {
+      "year": "2015",
+      "folderName": "free_hongkong",
+      "photosName": ["hongkong_01", "hongkong_02", "hongkong_03", "hongkong_04", "hongkong_05", "hongkong_06", "hongkong_07", "hongkong_08", "hongkong_09", "hongkong_10", "hongkong_11", "hongkong_12"]
+    },
+    {
+      "year": "2015",
+      "folderName": "gd_japan",
+      "photosName": ["hakone_02", "izu_01", "tokyo_01", "tokyo_02", "tokyo_03", "tokyo_04", "tokyo_05", "tokyo_06", "tokyo_07", "yokohama_01", "yokohama_02", "yokohama_03", "yokohama_04"]
+    },
+    {
+      "year": "2016",
+      "folderName": "malaysia",
+      "photosName": ["kualalumpur_01", "kualalumpur_02", "kualalumpur_03", "kualalumpur_04", "kualalumpur_05", "malacca_01", "malacca_02", "portdickson_01", "portdickson_02", "portdickson_03", "sungaipelek_01", "sungaipelek_02"]
+    },
+    {
+      "year": "2017",
+      "folderName": "turkey",
+      "photosName": ["ankara_01", "ankara_02", "antalya_01", "antalya_02", "antalya_03", "antalya_04", "antalya_05", "cappadocia_01", "cappadocia_02", "cappadocia_03", "cappadocia_06", "cappadocia_07", "cappadocia_08", "cappadocia_09", "cappadocia_10", "ephesus_01", "ephesus_02", "ephesus_03", "ephesus_04", "ephesus_05", "istanbul_01", "istanbul_02", "istanbul_03", "istanbul_04", "istanbul_05", "istanbul_06", "istanbul_07", "istanbul_08", "istanbul_09", "konya_01", "konya_02", "konya_03", "konya_04", "pamukkale_01", "pamukkale_02", "pamukkale_03", "safranbolu_01", "safranbolu_02", "safranbolu_03", "safranbolu_04", "safranbolu_05", "urgup_01", "urgup_02"]
+    },
+    {
       "year": "2018",
       "folderName": "keihan_japan",
       "photosName": ["kyoto_01", "kyoto_02", "kyoto_03", "kyoto_04", "kyoto_05", "kyoto_06", "nara_01", "nara_02", "osaka_01", "osaka_02", "osaka_03"]
