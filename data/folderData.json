@@ -79,6 +79,16 @@
       "year": "2025",
       "folderName": "snowboarding_japan",
       "photosName": ["chitose_01", "furano_01", "otaru_01", "sapporo_01", "sapporo_02", "sapporo_03"]
+    },
+    {
+      "year": "2026",
+      "folderName": "98a_korea",
+      "photosName": ["seoul_01", "seoul_02", "seoul_03", "seoul_04", "seoul_05", "seoul_06"]
+    },
+    {
+      "year": "2026",
+      "folderName": "phuquoc",
+      "photosName": ["phuquoc_01", "phuquoc_02", "phuquoc_03", "phuquoc_04", "phuquoc_05"]
     }
   ]
 }
